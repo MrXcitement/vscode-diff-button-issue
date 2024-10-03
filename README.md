@@ -12,7 +12,10 @@ it's place in the file and either causes the wrong chunk of code to be replaced
 or it just stops working.  I have created this repository as a working example
 of the problem.
 
-I have tested vscode on macOS and Windows and they both behave the same.
+I tested using macOS and Windows Visual Studio Code
+- v1.92.x - Diff revert button works.
+- v1.93.x - Diff revert button fails after editing a few files.
+- v1.94.x - Diff revert button works.
 
 ## Usage
 
