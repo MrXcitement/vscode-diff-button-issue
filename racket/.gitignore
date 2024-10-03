@@ -1,0 +1,20 @@
+# .gitignore -- the files and folders to be ignored by git
+# Mike Barker <mike@thebarkers.com>
+# August 9th, 2023
+
+# This ignores all subfolders and there contents.
+# The .devcontainer and .vscode folders will not be included.
+# Any src folder and it's contents will not be included.
+# If you need to include a solution that is not in a src folder
+# add it to the Include files section.
+
+## Ignore all subfolders
+*/*
+
+## Include folders
+!.devcontainer/*
+!.vscode/*
+
+## Include files
+!hello-world/hello-world.rkt
+!matching-brackets/matching-brackets.rkt

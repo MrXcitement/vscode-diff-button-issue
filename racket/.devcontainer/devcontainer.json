@@ -1,0 +1,28 @@
+{
+  "name": "Exercism Racket",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Set *default* container specific settings.json values on container create.
+      "settings": {},
+      "extensions": [
+        "evzen-wybitul.magic-racket"
+      ]
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDefaultShell": "true"
+    },
+    "ghcr.io/devcontainers-contrib/features/exercism-cli:1": {},
+    "ghcr.io/devcontainers/features/go:1": {},
+    "ghcr.io/azutake/devcontainer-features/go-packages-install:0": {
+      "packages": "gitlab.com/gitlab-org/cli/cmd/glab@main"
+    }
+  },
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:~/go/bin"
+  },
+  "postCreateCommand": "bash -i .devcontainer/post_create.sh"
+}

@@ -1,0 +1,38 @@
+# This is Git's per-user configuration file.
+[alias]
+    cp = cherry-pick
+    st = status -s
+    cl = clone
+    co = checkout
+    cob = checkout -b
+    ci = commit
+    br = branch
+    dw = diff --word-diff
+    dc = diff --cached
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+    lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    le = log --oneline --decorate
+    list-alias = "!git config -l | grep alias | cut -c 7-"
+    la = "!git list-alias"
+    file-log = log -u
+    fl = "!git file-log"
+    dl = "!git ll -1"
+    dlc = diff --cached HEAD^
+    pushup = "!git push --set-upstream origin $(git symbolic-ref --short HEAD)"
+[core]
+    autocrlf = input
+    excludesfile = ~/.gitignore_global
+[init]
+    defaultBranch = main
+[pull]
+    ff = only
+[push]
+    default = simple
+[safe]
+    directory = *

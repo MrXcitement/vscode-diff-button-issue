@@ -1,0 +1,14 @@
+# .gitignore -- the files and folders to be ignored by git
+
+## Ignore all subfolders and their contents.
+*/*
+
+## Include devcontainer and vscode folders
+!.devcontainer/*
+!.vscode/*
+
+## Include any solution files
+!**/*.temp
+
+## Ignore test and other files
+# **/*test.temp

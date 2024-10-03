@@ -1,0 +1,17 @@
+{
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "magicRacket.languageServer.command": "xvfb-run",
+    "magicRacket.languageServer.arguments": [
+        "--auto-servernum",
+        "racket",
+        "--lib",
+        "racket-langserver"
+    ],
+}

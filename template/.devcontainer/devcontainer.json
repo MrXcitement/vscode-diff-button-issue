@@ -1,0 +1,30 @@
+{
+  "name": "Exercism Template",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Set *default* container specific settings.json values on container create.
+      "settings": {},
+      "extensions": [
+        "editorconfig.editorconfig",
+        "streetsidesoftware.code-spell-checker"
+      ]
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDefaultShell": "true"
+    },
+    "ghcr.io/mrxcitement/devc-features/exercism-cli:1": {},
+    "ghcr.io/devcontainers/features/go:1": {},
+    "ghcr.io/azutake/devcontainer-features/go-packages-install:0": {
+      "packages": "gitlab.com/gitlab-org/cli/cmd/glab@main"
+    },
+    "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+      "packages": "entr, fzf, xdg-utils, zoxide"
+    }
+  },
+  "remoteEnv": {},
+  "postCreateCommand": "bash -i .devcontainer/post_create.sh"
+}

@@ -1,0 +1,13 @@
+# .gitattributes -- specify how files are handled by git
+# Docs: https://git-scm.com/docs/gitattributes
+# Additional information:
+# https://www.aleksandrhovhannisyan.com/blog/crlf-vs-lf-normalizing-line-endings-in-git/#line-endings-in-git
+
+# Force all text files added to git to have LF line-endings
+* text=auto
+
+# Force checkout line-endings
+# *.bat   eol=crlf
+
+# Binary files
+# *.doc binary
